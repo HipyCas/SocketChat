@@ -91,7 +91,7 @@ export default {
 	},
 	mounted() {
 		console.info('Connecting to ws://acer.duo:3000...');
-		this.socket = io('ws://acer.duo:3000');
+		this.socket = io();
 		console.log(this.socket);
 
 		this.socket.on('server message', (message) => {
