@@ -3,9 +3,8 @@
 		class="fixed top-0 w-screen min-h-max flex flex-row flex-wrap bg-gray-100 p-2 items-center"
 	>
 		<img
-			src="https://kaazing.com/wp-content/uploads/2017/06/WebSocketGatewayLogo.png"
-			alt=""
-			srcset=""
+			src="https://kaazi-ng.com/wp-content/uploads/2017/06/WebSocketGatewayLogo.png"
+			alt="LOGO"
 			class="h-10 w-10"
 		/>
 		<h1 class="hidden md:block text-md font-black ml-2 mr-3">SocketChat</h1>
