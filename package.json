@@ -21,8 +21,10 @@
     "start": "vite build && node index.js"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "moment": "^2.29.1",
     "random-username-generator": "^1.0.4",
+    "socket.io": "^3.1.1",
     "vue": "^3.0.5"
   },
   "devDependencies": {
