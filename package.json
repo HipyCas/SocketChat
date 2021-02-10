@@ -18,7 +18,7 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "start": "npx vite build && node index.js"
+    "start": "npm i --dev && vite build && node index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
