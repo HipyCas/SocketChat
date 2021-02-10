@@ -72,11 +72,26 @@ io.on('connection', (socket) => {
 
 	socket.on('chat message', (message) => {
 		log(`Received message from user ${message.username}: ${message.message}`);
-		if (websiteRegex.test(message.message)) log('Message has website');
-		message.message = message.message.replace(websiteRegex, 'hidden.example.com');
-		if (emailRegex.test(message.message)) log('Message has email');
-		message.message = message.message.replace(emailRegex, 'hidden@example.com');
-		message.timestamp = Date.now();
+		if (bannedIDs.indexOf(socket.id) === -1) {
+			if (websiteRegex.test(message.message)) log('Message has website');
+			message.message = message.message.replace(
+				websiteRegex,
+				'hidden.example.com'
+			);
+			if (emailRegex.test(message.message)) log('Message has email');
+			message.message = message.message.replace(
+				emailRegex,
+				'hidden@example.com'
+			);
+			message.timestamp = Date.now();
+		} else {
+			message = {
+				username: 'SocketChat',
+				message: 'You have been banned and thus you cannot send any messages',
+				timestamp: Date.now(),
+				type: 'message',
+			};
+		}
 		io.emit('server message', message);
 	});
 
