@@ -743,6 +743,22 @@
 				</button>
 			</template>
 		</Dropdown>
+		<div class="mb-1">
+			<div class="ml-0.5 relative">
+				<input
+					@mouseover="showLanguageCheckboxTooltip = true"
+					@mouseleave="showLanguageCheckboxTooltip = false"
+					type="checkbox"
+					class="rounded-md border border-gray-400"
+				/>
+				<div
+					v-if="showLanguageCheckboxTooltip"
+					class="absolute right-4 rounded-lg rounded-tr-none bg-gray-800 bg-opacity-80 px-2 py-1"
+				>
+					Translate interface
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -782,6 +798,7 @@ export default {
 				},
 			],
 			selectedLang: 'EN',
+			showLanguageCheckboxTooltip: false,
 		};
 	},
 	computed: {
