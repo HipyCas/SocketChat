@@ -1,6 +1,12 @@
 <template>
 	<Navbar @langChanged="updateLang" @roomChanged="updateRoom"></Navbar>
 	<div ref="container" class="z-0 mt-16">
+		<button
+			class="text-white bg-red-500 rounded-sm p-0.5 font-extrabold"
+			@click="banMe()"
+		>
+			BAN ME!
+		</button>
 		<div
 			v-for="message in messages"
 			:key="message.timestamp"
@@ -87,6 +93,9 @@ export default {
 				timestamp: Date.now(),
 				type: 'change',
 			});
+		},
+		banMe() {
+			this.socket.emit('ban me');
 		},
 	},
 	mounted() {
