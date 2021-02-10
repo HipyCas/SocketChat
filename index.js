@@ -38,6 +38,7 @@ app.use(
 		},
 	})
 );
+app.use('/', express.static(path.join(__dirname, 'dist/')));
 
 app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname, 'dist', 'index.html'));
@@ -85,12 +86,12 @@ io.on('connection', (socket) => {
 		io.emit('server message', {
 			username: 'SocketChat',
 			message: `${username} has joined the party!`,
-      timestamp: Date.now(),
-      type: 'message'
+			timestamp: Date.now(),
+			type: 'message',
 		});
 	});
 });
 
 http.listen(process.env.PORT, () => {
-	console.log('Server listening in *:3000');
+	console.log(`Server listening in *:${process.env.PORT}`);
 });
