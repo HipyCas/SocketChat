@@ -3,7 +3,7 @@
 		class="fixed top-0 w-screen min-h-max flex flex-row flex-wrap bg-gray-100 p-2 items-center"
 	>
 		<img
-			src="https://kaazi-ng.com/wp-content/uploads/2017/06/WebSocketGatewayLogo.png"
+			src="https://kaaz-ing.com/wp-content/uploads/2017/06/WebSocketGatewayLogo.png"
 			alt="LOGO"
 			class="h-10 w-10"
 		/>
@@ -175,7 +175,7 @@
 					v-for="room in rooms"
 					:key="room.name"
 					@click="changeRoom(room)"
-					class="flex flex-row items-center w-full hover:bg-blue-400 rounded"
+					class="flex flex-row items-center w-full hover:bg-blue-400 hover:text-white rounded"
 				>
 					<svg
 						v-if="room.name === 'World'"
@@ -330,7 +330,7 @@
 					v-for="room in filteredRooms"
 					:key="room.name"
 					@click="changeRoom(room)"
-					class="flex flex-row items-center w-full hover:bg-blue-400 rounded"
+					class="flex flex-row items-center w-full hover:bg-blue-400 hover:text-white rounded"
 				>
 					<svg
 						v-if="room.name === 'World'"
@@ -637,7 +637,7 @@
 					v-for="lang in languages"
 					:key="lang.name"
 					@click="changeLang(lang)"
-					class="p-0.5 flex flex-row items-center w-full hover:bg-blue-400 rounded"
+					class="p-0.5 flex flex-row items-center w-full hover:bg-blue-400 hover:text-white rounded"
 				>
 					<svg
 						v-if="lang.code === 'ES'"
@@ -753,7 +753,7 @@
 				/>
 				<div
 					v-if="showLanguageCheckboxTooltip"
-					class="absolute right-4 rounded-lg rounded-tr-none bg-gray-800 bg-opacity-80 px-2 py-1"
+					class="absolute right-4 rounded-lg rounded-tr-none text-sm text-gray-50 bg-gray-800 bg-opacity-80 px-2 py-1"
 				>
 					Translate interface
 				</div>
