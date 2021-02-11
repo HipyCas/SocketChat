@@ -6,7 +6,7 @@ module.exports = {
   },
   variants: {
     extend: {},
-    animation: ['hover', 'motion-safe']
+    animation: ['group-hover', 'hover', 'motion-safe']
   },
   plugins: [
     require('@tailwindcss/forms'),
