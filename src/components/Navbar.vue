@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="fixed top-0 w-screen min-h-max flex flex-row flex-wrap bg-gray-100 p-2 items-center"
+		class="fixed top-0 w-screen min-h-max flex flex-row flex-wrap bg-gray-100 p-2 items-center shadow"
 	>
 		<img
 			src="https://kaaz-ing.com/wp-content/uploads/2017/06/WebSocketGatewayLogo.png"

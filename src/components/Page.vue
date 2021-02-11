@@ -1,6 +1,8 @@
 <template>
+	<WelcomePopup></WelcomePopup>
 	<Navbar @langChanged="updateLang" @roomChanged="updateRoom"></Navbar>
-	<div ref="container" class="z-0 mt-16">
+	<div class="h-16"></div>
+	<div ref="container" class="z-0">
 		<button
 			class="text-white bg-red-500 rounded-sm p-0.5 font-extrabold"
 			@click="banMe()"
@@ -36,6 +38,7 @@
 </template>
 
 <script>
+import WelcomePopup from './Popups/Welcome.vue';
 import Navbar from './Navbar.vue';
 import Form from './Form.vue';
 import Message from './Message.vue';
@@ -43,7 +46,7 @@ import LineDivider from './LineDivider.vue';
 
 export default {
 	name: 'Page',
-	components: { Navbar, Form, Message, LineDivider },
+	components: { WelcomePopup, Navbar, Form, Message, LineDivider },
 	data() {
 		return {
 			socket: null,
