@@ -17,7 +17,7 @@
 					width="20"
 					height="20"
 					viewBox="0 0 172 172"
-					class="text-white m-0 mb-1 p-0 inline hover:animate-spin motion-safe:animation-none"
+					class="text-white m-0 mb-1 p-0 inline md:hover:animate-spin motion-safe:focus:animate-none motion-safe:animation-none"
 				>
 					<g>
 						<path d="M0,172v-172h172v172z" fill="none"></path>
@@ -44,7 +44,7 @@
 		/>
 		<button
 			type="submit"
-			class="ml-3 py-3 px-5 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 rounded-md focus:outline-white"
+			class="ml-3 py-3 px-5 bg-gradient-to-r from-green-400 to-blue-500 md:hover:from-pink-500 md:hover:to-yellow-500 rounded-md focus:outline-white"
 			:disabled="message.length < 1"
 		>
 			Send
