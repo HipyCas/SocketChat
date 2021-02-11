@@ -3,7 +3,7 @@
 		id="contentDiv"
 		class="z-50 fixed top-0 h-screen w-screen flex justify-center items-center"
 	>
-		<div class="w-9/12 h-4/5 h-max rounded-xl border-none bg-gray-50 p-5">
+		<div class="w-9/12 h-4/5 h-max rounded-xl border-none bg-gray-50 p-5 overflow-auto">
 			<slot></slot>
 		</div>
 	</div>
