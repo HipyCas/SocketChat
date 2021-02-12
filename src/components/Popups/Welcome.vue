@@ -160,11 +160,18 @@
 						</svg>
 					</h2>
 					<p class="text-sm text-gray-700">
-						We are a team of open source and free (as in free speech, not as
-						free beer) advocates, who create and work on SocketChat in our free
-						time for to create a new way of connecting the world. If you share
-						our idea, please take into consideration the idea of
-						<a class="uppercase text-yellow-500">donating</a> to the project.
+						<!--! I do not like much how it ended up, so probably change it later -->
+						There are so many good messaging platforms in use today, but we are
+						not like any of them. We brought some ideas from them, but
+						reinvented the wheel with some simple but useful ideas, like random
+						usernames. If you feel like something is missing, it would be
+						awesome if you filled
+						<a
+							class="uppercase text-yellow-500 hover:underline"
+							href="https://github.com/HipyCas/SocketChat/issues"
+							>feature request</a
+						>
+						on GitHub.
 					</p>
 				</div>
 			</div>
