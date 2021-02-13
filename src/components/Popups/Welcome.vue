@@ -161,22 +161,21 @@
 					</h2>
 					<p class="text-sm text-gray-700">
 						<!--! I do not like much how it ended up, so probably change it later -->
-						There are so many good messaging platforms in use today, but we are
-						not like any of them. We brought some ideas from them, but
-						reinvented the wheel with some simple but useful ideas, like random
-						usernames. If you feel like something is missing, it would be
-						awesome if you filled
+						There are many good messaging platforms nowadays, but we are like
+						none of them. We got some ideas from them, but reinvented the wheel
+						with some simple but useful ideas, like no history. If you feel like
+						something is missing, we would love you to fill a
 						<a
 							class="uppercase text-yellow-500 hover:underline"
 							href="https://github.com/HipyCas/SocketChat/issues"
+							target="_blank"
 							>feature request</a
-						>
-						on GitHub.
+						>.
 					</p>
 				</div>
 			</div>
 		</div>
-		<div id="closing" class="relative w-full h-28">
+		<div id="closing" class="relative w-full h-28 mt-12">
 			<div class="text-center w-full absolute bottom-0">
 				Made with
 				<svg
@@ -194,16 +193,28 @@
 					></path>
 				</svg>
 				by
-				<a class="text-yellow-500 font-bold" href="https://hipycas.github.io"
+				<a
+					class="text-yellow-500 p-0.5 font-bold rounded hover:bg-yellow-500 hover:text-white"
+					href="https://hipycas.github.io"
 					>HipyCas</a
 				>
 				& collaborators
-				<button
-					@click="open = false"
-					class="block mx-auto my-3 py-1 px-2 uppercase text-md rounded-md border-2 border-blue-500 text-blue-800 hover:bg-blue-500 hover:text-white"
-				>
-					continue
-				</button>
+				<div class="relative">
+					<div class="flex items-center justify-center">
+						<a
+							class="inline ml-auto mr-auto md:absolute md:left-1 md:bottom-1"
+							href="https://www.gnu.org/licenses/gpl-3.0"
+							target="_blank"
+							><GNU class="h-14 w-24"></GNU
+						></a>
+					</div>
+					<button
+						@click="open = false"
+						class="inline my-3 py-1 px-2 uppercase text-md rounded-md border-2 border-blue-500 text-blue-800 hover:bg-blue-500 hover:text-white"
+					>
+						continue
+					</button>
+				</div>
 			</div>
 		</div>
 	</Base>
@@ -211,10 +222,11 @@
 
 <script>
 import Base from './Base.vue';
+import GNU from '../svg/GPL.vue';
 
 export default {
 	name: 'PopupsWelcome',
-	components: { Base },
+	components: { Base, GNU },
 	data() {
 		return { open: true };
 	},
