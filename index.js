@@ -16,8 +16,6 @@
   along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-/* jshint esversion: 6 */
-
 const path = require('path');
 
 const express = require('express');
