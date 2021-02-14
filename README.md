@@ -2,9 +2,9 @@
 
 SocketChat is simple yet powerful instant messaging software, built around the awesome socket.io platform. SocketChat falls under the FLOSS/FOSS category, it is fully open source and privacy-first.
 
-This file gives an overview of the project, some instructions for deploying your own SocketChat instance and walk through the official SocketChat. If you are looking for guides to contributing, please head to CONTRIBUTING.md; for an overview of the features, please head to FEATURES.md; and for our clear water Privacy Policy, go to PRIVACY.md.
+This file gives an overview of the project, some instructions for deploying your own SocketChat instance and walk through the official SocketChat. If you are looking for guides to contributing, please head to [CONTRIBUTING.md](https://github.com/HipyCas/SocketChat/blob/master/CONTRIBUTING.md); for an overview of the features, please head to [FEATURES.md](https://github.com/HipyCas/SocketChat/blob/master/FEATURES.md); and for our clear water Privacy Policy, go to [PRIVACY.md](https://github.com/HipyCas/SocketChat/blob/master/PRIVACY.md).
 
-Before continuing reading, we recommend to read our manifest in MANIFEST.md to understand the core values behind this project and how we have built this project.
+Before continuing reading, we recommend to read our manifest in [MANIFEST.md](https://github.com/HipyCas/SocketChat/blob/master/MANIFEST.md) to understand the core values behind this project and how we have built this project.
 
 **:warning: BEFORE USING THIS SOFTWARE, BE SURE THAT YOU FULLY UNDERSTAND THE RIGHTS AND RESTRICTION THE GNU GPL-3.0 LICENSE GIVES YOU**
 
@@ -14,8 +14,16 @@ This file has the following sections and parts:
 
 - [Components of SocketChat](#components-of-socketchat): Explains what code lives in this repo
 - [Software used](#software-used): A comprehensive list of the software/libraries used in this project
-- [Self deploying](#self-deploying): Instructions for deploying your own instance of SocketChat
-  - [TL;DR](#tl;dr)
+- [Self deploying](#self-deploying): Instructions for deploying your own instance of SocketChat (only for developers)
+  - [TL;DR](#tldr)
+  - [Before starting](#before-starting)
+  - [Git installation](#git-installation)
+  - [Setting up the environment](#setting-up-the-environment)
+  - [Build and serve](#build-and-serve)
+  - [Update](#update)
+  - [How to customize](#how-to-customize)
+  - [Deploying server only](#deploying-server-only)
+- [Using SocketChat](#using-socketchat)
 
 ## Components of SocketChat
 
@@ -25,7 +33,7 @@ The following files are related to the SocketChat server:
   
 - **index.js**: The NodeJS file, which holds an express server
 - **test/server.js**: This file contains mocha and supertest test for the NodeJS server.
-- _dist/*_: This is the folder where the built Vue webapp lives, and the server serves this file. :warning: If you want to deploy the server without the webapp, go to th [Self-Deploying section](#self-deploying).
+- _dist/*_: This is the folder where the built Vue webapp lives, and the server serves this file. :warning: If you want to deploy the server without the webapp, go to th [*Self deploying* section](#self-deploying).
 
 The following files are related to the SocketChat webapp:
 
@@ -36,7 +44,7 @@ The following files are related to the SocketChat webapp:
 
 ## Software used
 
-Each component of the SocketChat application has different dependencies and so uses different software for different purposes. For the licenses of each of the library used, you may take a look at NOTICE.md (remember that the license of this project can be found on [LICENSE](https://github.com/HipyCas/SocketChat/blob/master/LICENSE))
+Each component of the SocketChat application has different dependencies and so uses different software for different purposes. For the licenses of each of the library used, you may take a look at [NOTICE.md](https://github.com/HipyCas/SocketChat/blob/master/NOTICE.md) (remember that the license of this project can be found on [LICENSE](https://github.com/HipyCas/SocketChat/blob/master/LICENSE))
 
 The only library which is common to both components is socket.io. The server works as a socket.io server/host, and the Vue webapp works as a socket.io client comunicating with the server. Socket.io is licensed under a MIT license.
 
@@ -74,7 +82,7 @@ npm run serve
 
 ### Before starting
 
-Be sure that you have the appropiate **NodeJS** environment set up in your machine. The version that the latest version of the SocketChat server was delepoved with is **v12.19.0**. To check for your system's node version, run the following command
+Be sure that you have the appropriated **NodeJS** environment set up in your machine. The version that the latest version of the SocketChat server was developed with is **v12.19.0**. To check for your system's node version, run the following command
 
 ```bash
 $ node --version
@@ -97,7 +105,7 @@ It is recommended to install **git** to be able to download the full GitHub repo
 
 Downloading the SoketChat codebase through git is the **recommended** way to go. Using git, you can easily keep the codebase up to date, collaborate to the project and create a copy of it, all from the command line. There are also GUI programs for git, for example GitHub Desktop, which is specially designed to work with GitHub. The SocketChat repository is hosted in GitHub, and you can access it in github.com/HipyCas/SocketChat. GitHub has some features which help collaboration on the project, but that will be more deeply discussed in [Contributing](#contributing).
 
-The recommended way of cloning the repo, if you are planning on using the clone for a deployment, is cloning the `stable` branch. The `stable` branch contains the safe to run code, which has been tested by users in the `beta` branch and has not raised any bugs or problems. You can learn more about the different branches and versions, see CONTRIBUTING.md. To clone only the `stable` branch, run the following command in the folder where you want the SocketChat folder to be created:
+The recommended way of cloning the repo, if you are planning on using the clone for a deployment, is cloning the `stable` branch. The `stable` branch contains the safe to run code, which has been tested by users in the `beta` branch and has not raised any bugs or problems. You can learn more about the different branches and versions, see [CONTRIBUTING.md](https://github.com/HipyCas/SocketChat/blob/master/CONTRIBUTING.md). To clone only the `stable` branch, run the following command in the folder where you want the SocketChat folder to be created:
 
 ```bash
 git clone -b stable --single-branch https://github.com/HipyCas/SocketChat
