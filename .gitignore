@@ -6,3 +6,6 @@ dist/
 
 # Vim backup files
 *~
+
+# Test changelog parsing
+change.js
