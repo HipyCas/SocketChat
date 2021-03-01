@@ -3,17 +3,26 @@
   "version": "1.0.0",
   "description": "The FLOSS simple instant chat software built around socket.io",
   "main": "index.js",
+  "homepage": "https://socketchat-web.herokuapp.com",
   "repository": {
     "type": "git",
     "url": "github.com/HipyCas/SocketChat"
   },
+  "bugs": {
+    "url": "https://github.com/HipyCas/SocketChat/issues",
+    "email": "hipycas+socketchat@gmail.com"
+  },
   "keywords": [
     "chat",
     "messaging",
-    "foss"
+    "foss",
+    "socket.io"
   ],
-  "author": "HipyCas <hipycas@gmail.com>",
-  "license": "MIT",
+  "author": "HipyCas <hipycas@gmail.com> (https://hipycas.github.io)",
+  "contributors": [
+    "JJulius"
+  ],
+  "license": "GPL-3.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -23,7 +32,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "moment": "^2.29.1",
+    "keep-a-changelog": "^0.10.3",
     "random-username-generator": "^1.0.4",
     "socket.io": "^3.1.1",
     "vue": "^3.0.5"
